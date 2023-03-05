@@ -36,3 +36,37 @@ navMenu.addEventListener('click', () => {
         backOpen.classList.add('not-show');
     }
 });
+
+//Contact-me form
+
+const sendBtn = document.querySelector('.send-btn');
+const contactName = document.querySelector('.c-name');
+const contactPhone = document.querySelector('.c-phone');
+const contactEmail = document.querySelector('.c-email');
+const messageName = document.querySelector('.f-name');
+const messagePhone = document.querySelector('.f-phone');
+const messageEmail = document.querySelector('.f-email');
+const messageSubmit = document.querySelector('.submit-feedback');
+
+sendBtn.addEventListener('click', () => {
+
+    if (contactName.value.trim() <= 0 ) {
+        messageName.style.display = 'block'
+         } else { messageName.style.display = 'none';
+     }
+
+    if (contactPhone.value.trim() <= 0 ) {
+        messagePhone.style.display = 'block'
+        } else { messagePhone.style.display = 'none';
+    }
+    
+    if (contactEmail.value.trim() <= 0 ) {
+        messageEmail.style.display = 'block'
+        } else { messageEmail.style.display = 'none';
+    } 
+
+    if (contactName.value.trim() ) {
+        messageSubmit.style.display = 'block'
+    }  else { messageSubmit.style.display = 'none';
+    }
+})
